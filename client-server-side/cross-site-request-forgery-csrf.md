@@ -132,8 +132,6 @@ And now, set the csrfToken as the value of the hidden input field called `_csrf`
 {% endtab %}
 {% endtabs %}
 
-{% embed url="https://security.stackexchange.com/questions/166724/should-i-use-csrf-protection-on-rest-api-endpoints/166798\#166798" %}
-
 {% hint style="info" %}
 You can find more details about this topic here:
 
