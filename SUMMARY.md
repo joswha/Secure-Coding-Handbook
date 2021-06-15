@@ -13,6 +13,7 @@
 
 * [Cross-Site Scripting \[XSS\]](client-server-side/xss.md)
 * [Cross-Site Request Forgery \[CSRF\]](client-server-side/cross-site-request-forgery-csrf.md)
+* [Server-Side Request Forgery \[SSRF\]](client-server-side/server-side-request-forgery-ssrf.md)
 
 ## Auxiliary
 

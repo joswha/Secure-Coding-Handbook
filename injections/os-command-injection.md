@@ -15,7 +15,7 @@ file = sys.argv[1]
 text = os.system("cat " +  file)
 ```
 
-![Here&apos;s command injection in action.](../.gitbook/assets/image%20%284%29.png)
+![Here&apos;s command injection in action.](../.gitbook/assets/image%20%284%29%20%281%29.png)
 
 ## 2. Mitigation:
 
