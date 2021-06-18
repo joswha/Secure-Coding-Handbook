@@ -17,5 +17,6 @@
 
 ## Auxiliary
 
+* [Authentication](auxiliary/authentication.md)
 * [File Upload](auxiliary/file-upload.md)
 

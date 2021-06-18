@@ -11,6 +11,7 @@ description: Current known list of resources
 * [https://github.com/ManicodeSecurity](https://github.com/ManicodeSecurity)
 * [https://owasp.org/SecureCodingDojo/codereview101/](https://owasp.org/SecureCodingDojo/codereview101/)
 * [https://wiki.owasp.org/index.php/](https://wiki.owasp.org/index.php/Main_Page)
+* [https://portswigger.net/web-security](https://portswigger.net/web-security)
 
 ## 2. Documentation:
 
@@ -24,7 +25,8 @@ description: Current known list of resources
 * [https://code.google.com/archive/p/browsersec/](https://code.google.com/archive/p/browsersec/)
 * [https://nostarch.com/websecurity](https://nostarch.com/websecurity)
 * [https://github.com/lirantal/awesome-nodejs-security](https://github.com/lirantal/awesome-nodejs-security)
-* **Web Application Security: Exploitation and Countermeasures for Modern Web Applications**
+* [https://owasp.org/www-pdf-archive/OWASP\_Code\_Review\_Guide\_v2.pdf](https://owasp.org/www-pdf-archive/OWASP_Code_Review_Guide_v2.pdf)
+* **Web Application Security: Exploitation and Countermeasures for Modern Web Applications\[**[Andrew ****Hoffman](https://www.goodreads.com/book/show/48992298-web-application-security)**\]**
 * **Web Security for Developers: Real Threats, Practical Defense \[**[Malcolm McDonald](https://www.goodreads.com/author/show/20096586.Malcolm_McDonald?from_search=true&from_srp=true)**\]**
 * \*\*\*\*[https://seclab.stanford.edu/websec/](https://seclab.stanford.edu/websec/)
 
