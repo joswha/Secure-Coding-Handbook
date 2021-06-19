@@ -19,4 +19,5 @@
 
 * [Authentication](auxiliary/authentication.md)
 * [File Upload](auxiliary/file-upload.md)
+* [Session Hijacking](auxiliary/session-hijacking.md)
 
