@@ -3,21 +3,21 @@
 * [Secure Coding Handbook](README.md)
 * [Resources](resources.md)
 
-## Injections
+## Client side
 
-* [SQL Injections \[SQLi\]](injections/sql-injections.md)
-* [XML External Entity Injection \[XXE\]](injections/xxe.md)
-* [OS Command Injection \[Command Execution\]](injections/os-command-injection.md)
+* [Cross-Site Scripting \[XSS\]](client-side/xss.md)
+* [Cross-Site Request Forgery \[CSRF\]](client-side/cross-site-request-forgery-csrf.md)
+* [Session Hijacking](client-side/session-hijacking.md)
 
-## Client and Server side <a id="client-server-side"></a>
+## Server Side
 
-* [Cross-Site Scripting \[XSS\]](client-server-side/xss.md)
-* [Cross-Site Request Forgery \[CSRF\]](client-server-side/cross-site-request-forgery-csrf.md)
-* [Server-Side Request Forgery \[SSRF\]](client-server-side/server-side-request-forgery-ssrf.md)
+* [XML External Entity Injection \[XXE\]](server-side/xxe.md)
+* [SQL Injections \[SQLi\]](server-side/sql-injections.md)
+* [OS Command Injection \[Command Execution\]](server-side/os-command-injection.md)
+* [Server-Side Request Forgery \[SSRF\]](server-side/server-side-request-forgery-ssrf.md)
+* [Authentication](server-side/authentication.md)
 
 ## Auxiliary
 
-* [Authentication](auxiliary/authentication.md)
 * [File Upload](auxiliary/file-upload.md)
-* [Session Hijacking](auxiliary/session-hijacking.md)
 

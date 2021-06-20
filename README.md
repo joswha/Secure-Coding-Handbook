@@ -6,8 +6,6 @@ Welcome to the **Secure Coding Handbook!** Here, you will find everything that I
 
 {% page-ref page="resources.md" %}
 
-
-
 #### Want to contribute?
 
 Sure thing! Message me on Twitter [**@VladToie**](https://twitter.com/VladToie), or simply do a pull request on the [**Secure-Coding-Handbook**](https://github.com/joswha/Secure-Coding-Handbook) repository.
