@@ -2,7 +2,7 @@
 
 ## 1. Introduction:
 
-Cross-site request forgery \(also known as **CSRF**\) is a web security vulnerability that allows an attacker to induce users to perform actions that they do not intend to perform. It allows an attacker to partly circumvent the same-origin policy, which is designed to prevent different websites from interfering with each other. In the usual attack scenario, a **`GET`** request that changes the state of the webserver is exploited. 
+Cross-site request forgery \(also known as **CSRF**\) is a web security vulnerability that allows an attacker to induce users to perform actions that they do not intend to perform. It enables an attacker to partly circumvent the same-origin policy, which is designed to prevent different websites from interfering with each other. In the usual attack scenario, a **`GET`** request that changes the state of the webserver that is exploited. 
 
 You can read more about this type of vulnerability, from the attacker's perspective, [here](https://portswigger.net/web-security/csrf).
 
@@ -12,21 +12,23 @@ You can read more about this type of vulnerability, from the attacker's perspect
 
 **REST** or **Representational State Transfer** states that **`GET`** requests should strictly be used when fetching data or other resources and that for any other actions that would essentially change the server state, you **should** use one of the appropriate protocols, such as **`PUT`**, **`POST`** and **`DELETE`**.
 
-Since not all actions have an obvious corresponding HTTP method, such as fetching = **`GET`**, **updating** = **`POST`**, **creating** = **`PUT`**, **delete** = **`DELETE`**, there are other mitigations that can secure our application as much as possible, though for now, it is important to remember that **`GET`** should strictly be used for fetching data.
+Since not all actions have an obvious corresponding HTTP method, such as fetching = **`GET`**, **updating** = **`POST`**, **creating** = **`PUT`**, **delete** = **`DELETE`**, there are other mitigations that can secure our application as much as possible, though for now, **it is important to remember** that **`GET`** should **strictly be used for fetching data**.
 
 ### 2.2. Working with CSRF tokens.
 
 This is one of the most recommended methods to properly mitigate CSRF. 
 
 {% hint style="info" %}
-CSRF tokens prevent CSRF because, without them, an attacker cannot create any valid requests to the backend server.
+**CSRF tokens prevent CSRF because**, without them, **an attacker cannot create any valid requests** to the **backend server**.
 {% endhint %}
 
 Listed below are a few techniques and use cases for those tokens.
 
 #### 2.2.1. Synchronizer token.
 
-Ideally, a developer would store CSRF tokens on the server-side. Depending on the implementation, those can either be **per-session** or **per-request** tokens. **Per-request** tokens are typically more secure than the **per-session** one, as the time span that they are valid is rather limited; this comes with usability limitations, however, using the "back" browser button for example would not work since the session would have expired already**.**
+Ideally, **a developer would store CSRF tokens** on the **server-side**. Depending on the implementation, those can either be **per-session** or **per-request** tokens. ****
+
+**Per-request** tokens are typically more secure than the **per-session** one, as the time span that they are valid is rather limited; this comes with usability limitations, however, using the "back" browser button for example would not work since the session would have expired already**.**
 
 Upon a request issue by the client, the server-side component should have checked the existence and validity of the token in the request compared to the token in the session. Should there either be no token at all or the request token mismatches the value in the session, the request should be aborted and even marked as a potential CSRF attack.
 

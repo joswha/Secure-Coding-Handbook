@@ -60,7 +60,7 @@ class Loader
 
 An XXE attack works by taking advantage of a feature in XML, namely **XML** e**X**ternal **Entities** \(XXE\) that allows external XML resources to be loaded within an XML document.  
   
- By submitting an XML file that defines an external entity with a `file://` URI, an attacker can effectively trick the application's SAX\(Simple API parser for XML\) parser into reading the contents of the arbitrary file\(s\) that reside on the server-side filesystem.
+ By submitting an XML file that defines an external entity with a `file://` URI, an attacker can effectively trick the **application's SAX\(Simple API parser for XML\) parser** into reading the contents of the arbitrary file\(s\) that reside on the server-side filesystem.
 
 Finally, we use the XML declaration `ENTITY` to load additional data from an external resource. The syntax for the `ENTITY` declaration is `ENTITY name SYSTEM URI` where `URI` is the full path to a remote URL or local file. In our example, we define the `ENTITY` tag to load the contents of `"file:///etc/passwd"`
 
@@ -96,21 +96,21 @@ This is an example of how the XML "payload" file can look like.
 
 When this XML document is processed by a vulnerable parser, such as the one presented above, any instances of `&bar;` will get replaced by the contents of `/etc/passwd` file.  
   
- Simply put the XML parser was tricked into accessing a resource that the application developers did not intend to be accessible, in this case, a file on the local file system of the remote server. Because of this vulnerability, any file on the remote server \(or more precisely, any file that the web server has read access to\) could be obtained.
+ Simply put **the XML parser was tricked into accessing a resource** that the application developers **did not intend to be accessible**, in this case, **a file on the local file system of the remote server**. Because of this vulnerability, **any file on the remote server** \(or more precisely, any file that the web server has read access to\) could be obtained.
 
-Unfortunately, the SAX parser has not been configured to deny the loading of external entities \( `DOCTYPE` declarations \), which when specified within our modified `payload.xml` file can be abused by an attacker to read arbitrary system files on the remote server.
+Unfortunately, the **SAX parser has not been configured to deny the loading** of external entities \( `DOCTYPE` declarations \), which when specified within our modified `payload.xml` file can be **abused by an attacker to read arbitrary system files** on the remote server.
 
 {% hint style="info" %}
-Because user-supplied XML input comes from an "untrusted source"\(namely, the client\) it is very difficult to properly validate the XML document to prevent this type of attack.
+Because user-supplied XML input comes from an "untrusted source"\(namely, the client\) **it is very difficult to properly validate the XML document** to **prevent this type of attack**.
 {% endhint %}
 
 ## 2. Mitigation:
 
 ### 2.1. Disabling inline DTD:
 
-Since we know that the parser should technically not allow loading external entities\( any kind of `DOCTYPE` declaration\), we can have the XML parser configured to only use a locally defined Document Type Definition \(DTD\) and disallow any inline DTD that is specified within a user-supplied XML document\(s\).  
+Since **we know that the parser should technically not allow loading external entities**\( any kind of `DOCTYPE` declaration\), we can **have the XML parser configured to only use a locally defined Document Type Definition \(DTD\)** and **disallow any inline DTD** that is specified within a user-supplied XML document\(s\).  
   
- Due to the fact that there are numerous XML parsing engines available, each has its own mechanism for disabling inline DTD to prevent XXE. You may need to search your XML parser's documentation for how to "disable inline DTD" specifically.
+ Due to the fact that there are **numerous XML parsing engines available,** each has its own mechanism for disabling inline DTD to prevent XXE. You may need to search your XML parser's documentation for how to "disable inline DTD" specifically.
 
 Here are some examples of how you may disable the inline **DTD parsing**.
 
