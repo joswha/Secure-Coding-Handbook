@@ -29,6 +29,7 @@ description: Current known list of resources
 * **Web Application Security: Exploitation and Countermeasures for Modern Web Applications\[**[Andrew ****Hoffman](https://www.goodreads.com/book/show/48992298-web-application-security)**\]**
 * **Web Security for Developers: Real Threats, Practical Defense \[**[Malcolm McDonald](https://www.goodreads.com/author/show/20096586.Malcolm_McDonald?from_search=true&from_srp=true)**\]**
 * \*\*\*\*[https://seclab.stanford.edu/websec/](https://seclab.stanford.edu/websec/)
+* [https://www.offensive-security.com/offsec/white-box-web-application-pentesting/](https://www.offensive-security.com/offsec/white-box-web-application-pentesting/)
 
 ## 3. Tools and miscellaneous:
 
