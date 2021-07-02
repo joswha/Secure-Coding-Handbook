@@ -7,7 +7,7 @@
 
 * [Cross-Site Scripting \[XSS\]](client-side/xss.md)
 * [Cross-Site Request Forgery \[CSRF\]](client-side/cross-site-request-forgery-csrf.md)
-* [Session Hijacking](client-side/session-hijacking.md)
+* [Clickjacking](client-side/clickjacking.md)
 
 ## Server Side
 
