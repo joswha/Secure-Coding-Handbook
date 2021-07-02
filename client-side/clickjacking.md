@@ -42,5 +42,3 @@ You can find more details about this topic here:
 * [What is clickjacking?](https://portswigger.net/web-security/clickjacking)
 {% endhint %}
 
-
-

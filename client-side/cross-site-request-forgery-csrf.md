@@ -146,5 +146,3 @@ You can find more details about this topic here:
 * [Preventing CSRF](https://auth0.com/blog/cross-site-request-forgery-csrf/)
 {% endhint %}
 
-
-

@@ -164,5 +164,3 @@ You can find more details about this topic here:
 * [Secure Password Storage \[OWASP\].](https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html)
 {% endhint %}
 
-
-
