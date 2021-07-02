@@ -30,6 +30,7 @@ description: Current known list of resources
 * **Web Security for Developers: Real Threats, Practical Defense \[**[Malcolm McDonald](https://www.goodreads.com/author/show/20096586.Malcolm_McDonald?from_search=true&from_srp=true)**\]**
 * \*\*\*\*[https://seclab.stanford.edu/websec/](https://seclab.stanford.edu/websec/)
 * [https://www.offensive-security.com/offsec/white-box-web-application-pentesting/](https://www.offensive-security.com/offsec/white-box-web-application-pentesting/)
+* [https://github.com/paragonie/awesome-appsec](https://github.com/paragonie/awesome-appsec)
 
 ## 3. Tools and miscellaneous:
 

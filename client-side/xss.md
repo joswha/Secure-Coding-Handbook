@@ -181,6 +181,16 @@ Now, we have to escape what is going to be displayed, and that is our user-input
 document.getElementById('currentItemName').textContext = escapeHTML(type); 
 ```
 
+## 3. Conclusions:
+
+All in all, by ensuring that:
+
+1. **Dynamic content is always escaped**, regardless of its origin.
+2. **JavaScript** execution is **locked down,** with the use of CSP.
+3. Both **1.** and **2.** are followed simultaneously :\)
+
+A developer will leave **little to no room** to XSS attacks in their application.
+
 {% hint style="info" %}
 You can find more details about this topic here:
 

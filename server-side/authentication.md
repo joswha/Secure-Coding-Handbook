@@ -1,14 +1,14 @@
 # Authentication
 
-## 1. Introduction.
+## 1. Introduction:
 
 **Authentication** plays a fundamental role in most applications nowadays, therefore it is also one of the juiciest picks for attackers. In the context of web applications, **Authentication** is traditionally performed through submitting a username or an email, along with a password\(which should, by common sense, be secret to each user\).
 
 We are also going to delve into **Session Management** since it is a process that is tightly linked to modern authentication. Typically, sessions are maintained on the server-side, thus playing their role in recognizing how to handle the incoming requests. They are usually distinguished by **session identifiers**, which should be unique per user and session. It is important to mention here that good "**session ids**" are represented as large random numbers so that hackers can have as few changes in taking advantage of them. 
 
-## 2. General guidelines.
+## 2. General guidelines:
 
-### 2.1 Error messages.
+### 2.1 Error messages:
 
 Enforcing generic and identical error messages plays an important role in defending against any information leaks on your authentication system. A developer should also pay attention to using the same HTTP response codes.
 
@@ -70,7 +70,7 @@ if (!passwordCorrect) {
 {% endtab %}
 {% endtabs %}
 
-### 2.2. Username and emails.
+### 2.2. Username and emails:
 
 Generally, make sure your usernames/user IDs are case-insensitive. User 'bobi' and user 'Bobi' should refer to the same user account. This can be enforced through "lower-casing" the user input before storing it into the database. You could even go as far as assigning a randomly generated username, thus providing some sort of secure data, instead of the user-defined one.
 
@@ -80,7 +80,7 @@ It is important to **NEVER** allow login to sensitive accounts\(i.e company's in
 
 Should it really be the case of needing to display your user's identification publicly, such as a username, what you can do instead is create a **Display Name** field to their profile/ account, such that you **NEVER** leak the username itself.
 
-#### **2.2.1. Validating emails.**
+#### **2.2.1. Validating emails:**
 
 If you intend to send an email from your site, without first-hand knowing whether or not that email is a valid one, you need to validate that address to check whether it corresponds to an email account that is actually working. Sending emails to unverified addresses, such as the ones that you can temporarily generate and use online, will[ quickly get you blacklisted by your email service provider](https://mailtrap.io/blog/python-validate-email/) since they’re suspicious of enabling spamming.
 
@@ -109,7 +109,7 @@ email = "vlad@bobi.io"
 checkEmailValid(email) # True
 ```
 
-### 2.3. Passwords.
+### 2.3. Passwords:
 
 It goes without saying that passwords should be **STRONG.** I assume you are already familiar with most PASSWORD good-practices rules, however, here's a list of the most important to follow:
 
@@ -139,17 +139,21 @@ You can go with: "**If that email address is in our database, we will send you a
 
 More on such error messages can [be read here](https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html#password-recovery) and [**here**](https://cheatsheetseries.owasp.org/cheatsheets/Forgot_Password_Cheat_Sheet.html).
 
-### 2.4. CAPTCHA.
+### 2.4. CAPTCHA:
 
 One of your first preventions against brute-forcing is CAPTCHA if used in an effective way. Since hackers have already found workarounds for some CAPTCHAs, this technique should be used as delaying the timespan of an attack, rather than preventing it altogether.
 
-### 2.5. Logging and monitoring.
+### 2.5. Logging and monitoring:
 
 Enable logging and monitoring of authentication functions to detect attacks/failures on a real-time basis.
 
 * **Ensure** that all **failures** are logged and reviewed.
 * **Ensure** that all **password failures** are logged and reviewed.
 * **Ensure** that all **account lockouts** are logged and reviewed.
+
+## 3. Conclusions:
+
+As of right now, the most important aspects of **properly handing authentication are**: making sure that **error messages illustrate as little and concise information as possible**, **properly validating** and even **checking the existance** of an email address, and **enforcing a "secure password" policy** such that there is little room for a bruteforce attack.
 
 {% hint style="info" %}
 You can find more details about this topic here:

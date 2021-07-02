@@ -1,6 +1,6 @@
 # Server-Side Request Forgery \[SSRF\]
 
-## 1. Introduction.
+## 1. Introduction:
 
  **Server-side request forgery** \(also known as SSRF\) is a web security vulnerability that allows an attacker to induce the server-side application to make **HTTP requests to an arbitrary domain** of the attacker's choosing.
 
@@ -12,7 +12,7 @@ A successful SSRF attack can often result in **unauthorized actions** or **acces
 You can read more about SSRF [here](https://portswigger.net/web-security/ssrf).
 {% endhint %}
 
-## 2. Typical vulnerable code.
+## 2. Typical vulnerable code:
 
 Here's an example of how and why SSRF vulnerability exists. Since the code below is opening the resource located on the given `$url` without being sanitized or checked whatsoever, the attacker can manipulate the server into **forging** a request to any URL they desire.
 
@@ -53,9 +53,9 @@ Here's an example of how and why SSRF vulnerability exists. Since the code below
 
 Since there are some **legitimate reasons to make outbound requests** from your server, such as using any third-party APIs\(processing payments, error-reporting, etc\), we have to examine and find ways of defending against **SSRF.**
 
-## 3. Mitigations.
+## 3. Mitigations:
 
-### 3.1. Whitelisting HTTP requests domains.
+### 3.1. Whitelisting HTTP requests domains:
 
 An obvious first level of defense is setting up a whitelist for domains that you **KNOW** your application has to request.
 
@@ -122,7 +122,7 @@ An obvious first level of defense is setting up a whitelist for domains that you
 
 This should still be avoided, since as previously mentioned you most probably already **KNOW** what domains you will be using for the API calls. Having said that, you can adapt your code to use the SDK\(software development kit\) for that API, or simply configuring the routes for those **API** calls in the code itself, rather than taking it from the `url` parameter.
 
-### 3.2. Network-layer firewalls.
+### 3.2. Network-layer firewalls:
 
 The objective of the Network layer security is to prevent your **VulnerableApplication** from performing calls to arbitrary applications. Only **allowed** _**routes**_ will be available for this application in order to **limit** its **network access** to only those that it should communicate with.
 
@@ -137,6 +137,10 @@ Apart from this type of firewall, one can leverage **network segregatio**n. More
 {% hint style="success" %}
 You may still not be satisfied with the mentioned mitigations, should you work with a more complex system. Should that be the case, please read this[ comprehensive cheatsheet against SSRF](https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html).
 {% endhint %}
+
+## 4. Conclusions:
+
+Typically, web servers should not do **HTTP-requests unless for a specific task**, such as using an API, etc. With this in mind, **a developer should strictly whitelist** the allowed domains/ websites that their application **should request to**; this can also be **enforced on a network-layer, via implementing firewalls.**
 
 {% hint style="info" %}
 You can find more details about this topic here:

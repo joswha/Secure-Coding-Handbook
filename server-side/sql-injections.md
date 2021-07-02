@@ -1,6 +1,6 @@
 # SQL Injections \[SQLi\]
 
-## Introduction: 
+## 1. Introduction: 
 
 SQL Injections happen when developers create **dynamic database queries** that include **user-supplied input**. For this reason, developers have to:
 
@@ -9,7 +9,7 @@ SQL Injections happen when developers create **dynamic database queries** that i
 
 The techniques presented here technically apply to most other programming languages and/ or types of databases.  
 
-## 1. Typical vulnerable code:
+## 2. Typical vulnerable code:
 
 {% tabs %}
 {% tab title="JavaScript" %}
@@ -83,7 +83,7 @@ else
 
 The attacker can inject raw **SQL syntax** within both the username and the password input fields to alter the meaning of the underlying **SQL query** responsible for authentication, resulting in a bypass of the application's authentication mechanism. An example of such bypass could be the query: `' or 1=1)#`
 
-## **2. Mitigation:**
+## **3. Mitigation:**
 
 [SQL Injection](https://owasp.org/www-community/attacks/SQL_Injection) attacks are **unfortunately very common**, and this is due to two factors:
 
@@ -92,7 +92,7 @@ The attacker can inject raw **SQL syntax** within both the username and the pass
 
 It's rather shameful that there still are so many **successful SQLi** occurring because it is really simple to avoid this type of vulnerability in the first place. In this article, you will discover the **top 4 most reliable techniques** for developing a **robust** and **secure** **application**.
 
-### **2.1. Prepared statements.**
+### **3.1. Prepared statements:**
 
 The use of **prepared statements with variable binding** \(aka **parameterized queries**\) is how all developers should write their queries to begin with. They are **simple to write** and **easier to understand than dynamic queries**. Parameterized queries **force the developer to first define all the SQL code**, and then **pass in each parameter to the query later**. This coding style allows the database to **distinguish between code and data**, **regardless** of what user input is **supplied**.
 
@@ -177,7 +177,7 @@ else
 Wherever **executing SQL queries** is necessary, make sure **to always use** [prepared statements and query parametrization](https://cheatsheetseries.owasp.org/cheatsheets/Query_Parameterization_Cheat_Sheet.html).
 {% endhint %}
 
-### 2.2. Stored procedures.
+### 3.2. Stored procedures:
 
 **Stored procedures are not always safe** from SQLi. However, **certain standard stored procedure** programming constructs **have the same effect as the use of parameterized queries** when **implemented safely**.
 
@@ -203,7 +203,7 @@ end
 Although stored procedures are an efficient way to safe proof against SQLI, it is crucial to also combine them with another technique, such as **prepared statements**.
 {% endhint %}
 
-### 2.3. Input validation.
+### 3.3. Input validation:
 
 There are two types of input validation: **syntactical** and **semantical.**
 
@@ -228,7 +228,7 @@ It is **important** to note however that any JavaScript **input validation** per
 As input validation is a widely used technique, ideally found in every other user interaction, you can [**learn more about it here**](https://cheatsheetseries.owasp.org/cheatsheets/Input_Validation_Cheat_Sheet.html).
 {% endhint %}
 
-### 2.4. Escaping user-supplied input.
+### 3.4. Escaping user-supplied input:
 
 This technique should **only be used as a last resort** when none of the above are **feasible**. Input validation is probably a better choice as this methodology is frail **and we cannot guarantee** it will prevent all **SQLi** in all situations.
 
@@ -290,6 +290,16 @@ foreach ($stmt as $row) {
 ```
 {% endtab %}
 {% endtabs %}
+
+## 4. Conclusions:
+
+**SQLI SHOULDNT EXIST!** Is what everyone says. And they are right! If every developer would:
+
+1. **Prepare their SQL queries.**
+2. **Validate & escape the user input.**
+3. Write clean efficient code.\( =D \)
+
+SQLIs will eventually go extinct! 
 
 {% hint style="info" %}
 You can find more details about this topic here:

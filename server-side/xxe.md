@@ -1,12 +1,12 @@
 # XML External Entity Injection \[XXE\]
 
-## Introduction:
+## 1. Introduction:
 
 This attack occurs when untrusted XML input containing a **reference to an external entity is processed by a weakly configured XML parser**.
 
 It may lead to the disclosure of confidential data, denial of service, [Server Side Request Forgery](https://owasp.org/www-community/attacks/Server_Side_Request_Forgery) \(SSRF\), port scanning from the perspective of the machine where the parser is located, and other system impacts. 
 
-## 1. Typical vulnerable code: 
+## 2. Typical vulnerable code: 
 
 {% tabs %}
 {% tab title="Javascript" %}
@@ -104,7 +104,7 @@ Unfortunately, the **SAX parser has not been configured to deny the loading** of
 Because user-supplied XML input comes from an "untrusted source"\(namely, the client\) **it is very difficult to properly validate the XML document** to **prevent this type of attack**.
 {% endhint %}
 
-## 2. Mitigation:
+## 3. Mitigation:
 
 ### 2.1. Disabling inline DTD:
 
@@ -168,9 +168,20 @@ class Loader
 {% endtab %}
 {% endtabs %}
 
+### 2.2. Follow the principle of least privilege:
+
+The threat of **XXE** attacks entirely illustrates the importance of **following the principle of least privilege**, which states that **software components and processes should be granted the minimal set of permissions** required to perform their tasks. 
+
+Since there are rarely good reasons for an XML parser to make outbound network request, consider locking down outbound network requests for your web server as a whole. If you do need outbound network access: for example, if your server code calls third-party APIs—you should **whitelist the domains of those APIs in your firewall rules**.
+
+## 3. Conclusions:
+
+It is common knowledge that DTDs are legacy technology, thus allowing for **inline DTDs** is **ALWAYS A BAD IDEA!** Modern XML parsers are hardened by default, and because of this, using such frameworks or parsers means that you might already be protected against attacks.
+
 {% hint style="info" %}
 You can find more details about this topic here:
 
-* [XML External Entity Prevention Cheatsheet \(OWASP](https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html)
+* [XML External Entity Prevention Cheatsheet \[OWASP\]](https://cheatsheetseries.owasp.org/cheatsheets/XML_External_Entity_Prevention_Cheat_Sheet.html)
+* [What is XXE? ](https://portswigger.net/web-security/xxe)
 {% endhint %}
 

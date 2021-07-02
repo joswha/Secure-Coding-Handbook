@@ -11,8 +11,8 @@
 
 ## Server Side
 
-* [XML External Entity Injection \[XXE\]](server-side/xxe.md)
 * [SQL Injections \[SQLi\]](server-side/sql-injections.md)
+* [XML External Entity Injection \[XXE\]](server-side/xxe.md)
 * [OS Command Injection \[Command Execution\]](server-side/os-command-injection.md)
 * [Server-Side Request Forgery \[SSRF\]](server-side/server-side-request-forgery-ssrf.md)
 * [Authentication](server-side/authentication.md)

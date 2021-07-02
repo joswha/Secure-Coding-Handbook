@@ -1,6 +1,6 @@
 # OS Command Injection \[Command Execution\]
 
-## Introduction:
+## 1. Introduction:
 
 **OS command injection** \(also known as shell injection\) is a **web security vulnerability** that allows an attacker to execute arbitrary operating system \(OS\) commands **on the server that is running an application**, and typically **fully compromise the application** and all its data. 
 
@@ -8,7 +8,7 @@
 **Command injection attacks are possible largely** due to **insufficient input validation**.
 {% endhint %}
 
-## 1. Typical vulnerable code:
+## 2. Typical vulnerable code:
 
 ```python
 import os
@@ -21,7 +21,7 @@ text = os.system("cat " +  file)
 
 ![Here&apos;s command injection in action.](../.gitbook/assets/image%20%284%29%20%281%29.png)
 
-## 2. Mitigation:
+## 3. Mitigations:
 
 {% hint style="warning" %}
 You should also spend some time on the following pages since defending against injections is quite similar regardless of what vulnerable vector you are dealing with.
@@ -31,13 +31,13 @@ You should also spend some time on the following pages since defending against i
 
 {% page-ref page="xxe.md" %}
 
-### 2.1. Avoid calling OS commands directly:
+### 3.1. Avoid calling OS commands directly:
 
 The primary defense **in the case of OS command injection** is **using built-in functions instead**, as they **cannot be manipulated to perform any malicious task**. Here is an example:
 
 Instead of having `os.system("mkdir " + dir_name)`, we have to use its alternative, which is `os.mkdir(dir_name)`
 
-### 2.2. Escaping the OS commands arguments:
+### 3.2. Escaping the OS commands arguments:
 
 By **escaping the user-supplied input** we can make sure **that we capsulate it into a "safer" format** for the `os.system` command to execute. As **escaping** the user-supplied input should **be used on top of an already existing defense mechanism**, it is recommended to **avoid** using OS commands directly.
 
@@ -52,7 +52,7 @@ An **example of escaping OS commands is showcased in the PHP function** [escapes
 
 ```
 
-### 2.3. Parametrization with input validation:
+### 3.3. Parametrization with input validation:
 
 Should calling **os commands on user-supplied input** be _**unavoidable**_ \(although it almost always is\), a developer can make use of the following **two defensive layers**. As discussed in the SQLi section, one can defend their endpoint with:
 
@@ -76,12 +76,16 @@ Ideally, a developer should use an existing API/ libraries for their language. F
 If no such available API exists, the developer **should scrub all input for malicious characters**. Typically, it is **much easier to define** the **legal** characters than the **illegal** characters.
 {% endhint %}
 
-### Additional Defenses <a id="additional-defenses"></a>
+### 3.4. Additional Defenses: <a id="additional-defenses"></a>
 
 On top of primary defenses, parameterizations, and input validation, it is also recommended adopting all of these extra defenses:
 
 * Applications **should run using the lowest privileges** that are required to accomplish the necessary tasks.
 * If possible, **create isolated accounts** with **limited privileges** that are only used for **a single task**.
+
+## 4. Conclusions:
+
+**Avoiding directly calling OS commands** is an obvious first step towards defending against command injection. As it should be a standard by now, when dealing with **user supplied input**, a developer should always make sure to **escape as well as validate it.**
 
 {% hint style="info" %}
 You can find more resources on this topic here:

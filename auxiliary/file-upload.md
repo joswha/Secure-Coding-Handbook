@@ -22,7 +22,7 @@ In short, following these policies should suffice against any known attacks that
 
 ## 2. Mitigation and defensive techniques:
 
-#### 2.1. Using a Secure Storing System:
+### 2.1. Using a Secure Storing System:
 
 `The zombie that's not in your house can't hurt you!`
 
@@ -30,7 +30,7 @@ Jokes aside, one of the most important approaches to a secure file uploading fun
 
 Of course, using a CDN may not be your best pick, and thus you may opt for one of the other alternatives, such as cloud-based storage\(Amazon S3, Google Storage Bucket, etc\), or even dedicated CMS\(although this comes with the extra configuration and attention headache\).
 
-#### 2.2. Various defensive techniques and alternatives:
+### 2.2. Various defensive techniques and alternatives:
 
 You may not opt for CDNs or any of the alternatives listed above. Should that be the case, and you really have to upload files to your "local" disk, here's what you have to do:
 
@@ -70,9 +70,12 @@ chmodr('/path/to/entire/folder', 0o600, (err) => {
   * Null bytes, _e.g._ `.php%00.jpg`, where `.jpg` gets truncated and `.php` becomes the new extension.
   * Generic bad regex that isn't properly tested and reviewed. Refrain from building your own logic unless you have enough knowledge on this topic.
 * **File content verification:** As a file's content may contain malicious or inappropriate data, a developer can always extra-validate it, based on the expected file type:
-
   * For **images**, it is worth reading these two posts: [Inject Executable, malicious code into PNG](https://security.stackexchange.com/questions/8113/how-to-inject-executable-malicious-code-into-pdf-jpeg-mp3-etc) and [How can I be protected from picture vulnerabilities](https://security.stackexchange.com/questions/8587/how-can-i-be-protected-from-pictures-vulnerabilities/8625#8625). Image rewriting is one of the common techniques that in theory destroy any kind of malicious content that could be injected into the image, and this is typically done through [randomization](https://security.stackexchange.com/questions/8587/how-can-i-be-protected-from-pictures-vulnerabilities/8625#8625).
   * Uploading **ZIP** files is totally not recommended, since they can literally contain any type of files, and thus allow for limitless.
+
+## 3. Conclusions:
+
+While the fundamental aspects of file uploading remain the same, developers have for good reason started looking towards ways of **"incorporating" file storage systems**, that are **easy, secure and overall convenient** to use.
 
 {% hint style="info" %}
 You can find more details about this topic here:

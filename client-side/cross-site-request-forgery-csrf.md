@@ -8,13 +8,13 @@ You can read more about this type of vulnerability, from the attacker's perspect
 
 ## 2. Defensive methods:
 
-### 2.1. Following the REST architecture.
+### 2.1. Following the REST architecture:
 
 **REST** or **Representational State Transfer** states that **`GET`** requests should strictly be used when fetching data or other resources and that for any other actions that would essentially change the server state, you **should** use one of the appropriate protocols, such as **`PUT`**, **`POST`** and **`DELETE`**.
 
 Since not all actions have an obvious corresponding HTTP method, such as fetching = **`GET`**, **updating** = **`POST`**, **creating** = **`PUT`**, **delete** = **`DELETE`**, there are other mitigations that can secure our application as much as possible, though for now, **it is important to remember** that **`GET`** should **strictly be used for fetching data**.
 
-### 2.2. Working with CSRF tokens.
+### 2.2. Working with CSRF tokens:
 
 This is one of the most recommended methods to properly mitigate CSRF. 
 
@@ -24,7 +24,7 @@ This is one of the most recommended methods to properly mitigate CSRF.
 
 Listed below are a few techniques and use cases for those tokens.
 
-#### 2.2.1. Synchronizer token.
+#### 2.2.1. Synchronizer token:
 
 Ideally, **a developer would store CSRF tokens** on the **server-side**. Depending on the implementation, those can either be **per-session** or **per-request** tokens. ****
 
@@ -51,7 +51,7 @@ Upon designing the CSRF tokens, a developer should know that tokens have to:
 </form>
 ```
 
-#### 2.2.2. Double submit cookies.
+#### 2.2.2. Double submit cookies:
 
 Maintaining a state for the CSRF tokens is sometimes problematic, and thus an alternative for the synchronizer token is the double submit cookie technique. 
 
@@ -61,7 +61,7 @@ When a user visits\(preferably before authentication\) the website should \(secu
 Note that this method is somewhat of a workaround and should preferably be used together with some way of encrypting those cookies, or working with[ **HMAC**](https://www.nedmcclain.com/better-csrf-protection/).
 {% endhint %}
 
-### 2.3. Use of custom request headers.
+### 2.3. Use of custom request headers:
 
 Adding CSRF tokens, using the double submit cookie or other defense that involves changing the UI can frequently be complex or otherwise problematic. An alternative defense method that is particularly well suited for AJAX or API endpoints is the use of a **custom request header**. This relies on the [same-origin policy \(SOP\)](https://en.wikipedia.org/wiki/Same-origin_policy), which states that JavaScript can be used for adding a custom header, limited strictly within its origin. By default, however, browsers do not allow JavaScript to make any cross-origin requests with custom headers.
 
@@ -83,7 +83,7 @@ Because the **`POST`**, **`PUT`**, **`PATCH`**, and **`DELETE`** are state-chang
 {% endtab %}
 {% endtabs %}
 
-### 2.4. Using a CSRF protection middleware.
+### 2.4. Using a CSRF protection middleware:
 
 In the end, using a "battle-tested" method such as a module is one of the safest defensives. As a proof of concept, I will showcase how using a [csurf](https://www.npmjs.com/package/csurf) will help you generate and manage CSRF tokens. 
 
@@ -133,6 +133,10 @@ And now, set the csrfToken as the value of the hidden input field called `_csrf`
 ```
 {% endtab %}
 {% endtabs %}
+
+## 3. Conclusions:
+
+Defending against CSRF can be seen as a multi-level challenge, in the sense that that developer has to strictly follow the **REST architecture,** as well as coming up with mandatory CSRF tokens; as going the paved way is not always a wrong thing to do\(especially in application security\), a developer can also make use of **CSRF protection middleware**.
 
 {% hint style="info" %}
 You can find more details about this topic here:

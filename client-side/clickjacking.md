@@ -1,6 +1,6 @@
 # Clickjacking
 
-## 1. Introduction.
+## 1. Introduction:
 
    **Clickjacking** is an **interface-based attack** in which a user is tricked into **clicking on overlayed actionable content** on a hidden website by clicking on some **content in a decoy website**.
 
