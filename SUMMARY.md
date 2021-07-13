@@ -15,6 +15,7 @@
 * [XML External Entity Injection \[XXE\]](server-side/xxe.md)
 * [OS Command Injection \[Command Execution\]](server-side/os-command-injection.md)
 * [Server-Side Request Forgery \[SSRF\]](server-side/server-side-request-forgery-ssrf.md)
+* [Host Header Injection](server-side/host-header-injection.md)
 * [Authentication](server-side/authentication.md)
 
 ## Auxiliary
