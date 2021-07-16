@@ -17,6 +17,7 @@
 * [Server-Side Request Forgery \[SSRF\]](server-side/server-side-request-forgery-ssrf.md)
 * [Host Header Injection](server-side/host-header-injection.md)
 * [Authentication](server-side/authentication.md)
+* [Directory Traversal](server-side/directory-traversal.md)
 
 ## Auxiliary
 
