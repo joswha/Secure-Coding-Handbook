@@ -138,7 +138,7 @@ Apart from this type of firewall, one can leverage **network segregatio**n. More
 You may still not be satisfied with the mentioned mitigations, should you work with a more complex system. Should that be the case, please read this[ comprehensive cheatsheet against SSRF](https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html).
 {% endhint %}
 
-## 4. Conclusions:
+## 4. Takeaways:
 
 Typically, web servers should not do **HTTP-requests unless for a specific task**, such as using an API, etc. With this in mind, **a developer should strictly whitelist** the allowed domains/ websites that their application **should request to**; this can also be **enforced on a network-layer, via implementing firewalls.**
 

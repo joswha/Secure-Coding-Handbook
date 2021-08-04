@@ -30,7 +30,7 @@ The `X-Frame-Options` HTTP response header can be used to indicate whether or no
 
  Alternatively, framing can be restricted to named sites/ domains:**`Content-Security-Policy: frame-ancestors normal-website.com;`**
 
-## 3. Conclusions:
+## 3. Takeaways:
 
 Both `X-Frame-Options` and`Content-Security-Policy` response headers define whether or not a browser should be allowed to embed or render a page in an `<iframe>` element. As this topic is more related to server-side configuration rather than vulnerable code itself, here is a link to a [more "interactive" resource](https://application.security/free-application-security-training/owasp-top-10-clickjacking) where you can find how Clickjacking usually behaves. 
 

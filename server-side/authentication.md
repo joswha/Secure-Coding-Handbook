@@ -151,7 +151,7 @@ Enable logging and monitoring of authentication functions to detect attacks/fail
 * **Ensure** that all **password failures** are logged and reviewed.
 * **Ensure** that all **account lockouts** are logged and reviewed.
 
-## 3. Conclusions:
+## 3. Takeaways:
 
 As of right now, the most important aspects of **properly handing authentication are**: making sure that **error messages illustrate as little and concise information as possible**, **properly validating** and even **checking the existance** of an email address, and **enforcing a "secure password" policy** such that there is little room for a bruteforce attack.
 

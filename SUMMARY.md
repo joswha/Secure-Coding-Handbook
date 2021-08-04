@@ -22,4 +22,5 @@
 ## Auxiliary
 
 * [File Upload](auxiliary/file-upload.md)
+* [Open Redirects](auxiliary/open-redirects.md)
 

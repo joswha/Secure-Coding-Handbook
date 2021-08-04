@@ -174,7 +174,7 @@ The threat of **XXE** attacks entirely illustrates the importance of **following
 
 Since there are rarely good reasons for an XML parser to make outbound network request, consider locking down outbound network requests for your web server as a whole. If you do need outbound network access: for example, if your server code calls third-party APIs—you should **whitelist the domains of those APIs in your firewall rules**.
 
-## 3. Conclusions:
+## 3. Takeaways:
 
 It is common knowledge that DTDs are legacy technology, thus allowing for **inline DTDs** is **ALWAYS A BAD IDEA!** Modern XML parsers are hardened by default, and because of this, using such frameworks or parsers means that you might already be protected against attacks.
 

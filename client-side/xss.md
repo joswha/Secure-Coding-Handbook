@@ -181,7 +181,7 @@ Now, we have to escape what is going to be displayed, and that is our user-input
 document.getElementById('currentItemName').textContext = escapeHTML(type); 
 ```
 
-## 3. Conclusions:
+## 3. Takeaways:
 
 All in all, by ensuring that:
 

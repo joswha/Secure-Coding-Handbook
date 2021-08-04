@@ -119,7 +119,7 @@ As a follow up, retrieving these files would by default be done in a secure and 
 
 Should storing files on the **local server really be necessary,** the most secure way of **defusing directory traversal attacks is via indirection**: you assign each file an arbitrary ID that corresponds to a **filepath**, and then have **all URLs reference each file by that ID**. This can be done, for example, **using a database**\(where you keep the reference between the **path of the file** and its **relative id**\)
 
-## 4. Conclusions:
+## 4. Takeaways:
 
 **Validating the absolute path** represents the basis of defending against directory traversal. Your go-to defense however is **using a CDN or any other filestoring online/ cloud systems**. Should storing files on the local server be one of your requirements, remember that **indirect file referencing** is a very powerful technique and you should leverage it.
 

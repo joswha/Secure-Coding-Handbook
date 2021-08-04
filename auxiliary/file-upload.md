@@ -73,7 +73,7 @@ chmodr('/path/to/entire/folder', 0o600, (err) => {
   * For **images**, it is worth reading these two posts: [Inject Executable, malicious code into PNG](https://security.stackexchange.com/questions/8113/how-to-inject-executable-malicious-code-into-pdf-jpeg-mp3-etc) and [How can I be protected from picture vulnerabilities](https://security.stackexchange.com/questions/8587/how-can-i-be-protected-from-pictures-vulnerabilities/8625#8625). Image rewriting is one of the common techniques that in theory destroy any kind of malicious content that could be injected into the image, and this is typically done through [randomization](https://security.stackexchange.com/questions/8587/how-can-i-be-protected-from-pictures-vulnerabilities/8625#8625).
   * Uploading **ZIP** files is totally not recommended, since they can literally contain any type of files, and thus allow for limitless.
 
-## 3. Conclusions:
+## 3. Takeaways:
 
 While the fundamental aspects of file uploading remain the same, developers have for good reason started looking towards ways of **"incorporating" file storage systems**, that are **easy, secure and overall convenient** to use.
 

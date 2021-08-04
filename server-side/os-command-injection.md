@@ -83,7 +83,7 @@ On top of primary defenses, parameterizations, and input validation, it is also 
 * Applications **should run using the lowest privileges** that are required to accomplish the necessary tasks.
 * If possible, **create isolated accounts** with **limited privileges** that are only used for **a single task**.
 
-## 4. Conclusions:
+## 4. Takeaways:
 
 **Avoiding directly calling OS commands** is an obvious first step towards defending against command injection. As it should be a standard by now, when dealing with **user supplied input**, a developer should always make sure to **escape as well as validate it.**
 

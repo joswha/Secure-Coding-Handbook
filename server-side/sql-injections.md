@@ -291,7 +291,7 @@ foreach ($stmt as $row) {
 {% endtab %}
 {% endtabs %}
 
-## 4. Conclusions:
+## 4. Takeaways:
 
 **SQLI SHOULDNT EXIST!** Is what everyone says. And they are right! If every developer would:
 

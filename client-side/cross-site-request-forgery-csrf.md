@@ -134,7 +134,7 @@ And now, set the csrfToken as the value of the hidden input field called `_csrf`
 {% endtab %}
 {% endtabs %}
 
-## 3. Conclusions:
+## 3. Takeaways:
 
 Defending against CSRF can be seen as a multi-level challenge, in the sense that that developer has to strictly follow the **REST architecture,** as well as coming up with mandatory CSRF tokens; as going the paved way is not always a wrong thing to do\(especially in application security\), a developer can also make use of **CSRF protection middleware**.
 

@@ -95,7 +95,7 @@ public void resetPasswordLink(HttpServletRequest request) {
  It is also **important** to check that you do not support **additional headers** that may be used to construct these attacks, in particular **`X-Forwarded-Host`**. Remember that these may be **supported by default**.
 {% endhint %}
 
-## 4. Conclusions:
+## 4. Takeaways:
 
 Taking the simple yet often overlooked points that we have discussed here should protect your application against any type of Host Header Injections.
 
