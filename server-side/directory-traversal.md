@@ -111,7 +111,7 @@ private void constructResponse(HttpServletResponse response,
 
 We have discussed a similar approach to actually **storing** the files in a secure way on a CDN/ cloud service here:
 
-{% page-ref page="../auxiliary/file-upload.md" %}
+{% page-ref page="file-upload.md" %}
 
 As a follow up, retrieving these files would by default be done in a secure and efficient way. They are really easy to implement and play around with, so you should definitely use them from now on.
 
