@@ -13,6 +13,7 @@ description: Current known list of resources
 * [https://wiki.owasp.org/index.php/](https://wiki.owasp.org/index.php/Main_Page)
 * [https://portswigger.net/web-security](https://portswigger.net/web-security)
 * [https://www.shiftleft.io/learn/](https://www.shiftleft.io/learn/)
+* [https://www.hacksplaining.com/exercises/](https://www.hacksplaining.com/exercises/toxic-dependencies)
 
 ## 2. Documentation:
 
