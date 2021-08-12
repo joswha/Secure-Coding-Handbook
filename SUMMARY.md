@@ -23,4 +23,5 @@
 
 * [File Upload](auxiliary/file-upload.md)
 * [Open Redirects](auxiliary/open-redirects.md)
+* [Vulnerable Dependency Management](auxiliary/vulnerable-dependency-management.md)
 
