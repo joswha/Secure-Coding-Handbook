@@ -43,5 +43,3 @@ You can find more details about this topic here:
 * [Dependency Confusion.](https://medium.com/@alex.birsan/dependency-confusion-4a5d60fec610)
 {% endhint %}
 
-
-
