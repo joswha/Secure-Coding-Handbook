@@ -91,6 +91,10 @@ Common target areas for reflected XSS are search pages and error pages since the
 
 **Reflected** and **Stored** **XSS** are _server-side_ injection issues while **DOM-based XSS** is a _client \(browser\) side_ injection issue. With **Reflected/Stored** the attack is injected into the application during **server-side** processing of requests where untrusted input is **dynamically** added to HTML. For **DOM XSS**, the attack is injected into the application during runtime in the **client** directly.
 
+{% hint style="info" %}
+Take a look at [**this awesome resource on DOM XSS**](https://domgo.at/cxss/intro)\( analyzing the source code and finding the vulnerabilities\)
+{% endhint %}
+
 ### 2.3.1. Vulnerable code example:
 
 Here you have an example of how a vulnerable page could look like, using HTML5 and JavaScript:
