@@ -24,4 +24,5 @@
 ## Auxiliary
 
 * [Vulnerable Dependency Management](auxiliary/vulnerable-dependency-management.md)
+* [Deserialization](auxiliary/deserialization.md)
 
