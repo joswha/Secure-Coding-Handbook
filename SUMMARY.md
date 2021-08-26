@@ -25,4 +25,5 @@
 
 * [Vulnerable Dependency Management](auxiliary/vulnerable-dependency-management.md)
 * [Deserialization](auxiliary/deserialization.md)
+* [Logging](auxiliary/logging.md)
 
