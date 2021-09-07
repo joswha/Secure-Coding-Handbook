@@ -6,11 +6,15 @@ Welcome to the **Secure Coding Handbook!** Here, you will find everything that I
 
 {% page-ref page="resources.md" %}
 
-#### Want to contribute?
-
-Sure thing! Message me on Twitter [**@VladToie**](https://twitter.com/VladToie), or simply do a pull request on the [**Secure-Coding-Handbook**](https://github.com/joswha/Secure-Coding-Handbook) repository.
-
 #### Spotted a bug?
 
 Making mistakes is human nature, fortunately. Please note that I am by no means an expert and should you find something that is totally erroneous or deviated from the subject, please [create an issue here](https://github.com/joswha/Secure-Coding-Handbook/issues). 
+
+#### Want to contribute?
+
+Sure thing! Message me on Twitter [**@VladToie**](https://twitter.com/VladToie), or simply write a pull request in the [**Secure-Coding-Handbook**](https://github.com/joswha/Secure-Coding-Handbook) repository.
+
+You can also buy me a **Pizza so I wouldn't have to cook it myself, and write more guides in that time =D** 
+
+{% embed url="https://www.buymeacoffee.com/bobi" %}
 

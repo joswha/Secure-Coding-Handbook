@@ -20,6 +20,7 @@
 * [Host Header Injection](server-side/host-header-injection.md)
 * [Authentication](server-side/authentication.md)
 * [Directory Traversal](server-side/directory-traversal.md)
+* [Template Injection \[SSTI\]](server-side/template-injection-ssti.md)
 
 ## Auxiliary
 
