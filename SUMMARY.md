@@ -22,6 +22,10 @@
 * [Directory Traversal](server-side/directory-traversal.md)
 * [Template Injection \[SSTI\]](server-side/template-injection-ssti.md)
 
+## API
+
+* [Broken Object Level Authorization](api/broken-object-level-authorization.md)
+
 ## Auxiliary
 
 * [Vulnerable Dependency Management](auxiliary/vulnerable-dependency-management.md)
