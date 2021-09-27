@@ -85,5 +85,3 @@ You can find more details about this topic here:
 * [What is Broken Object Level Authorization ](https://www.wallarm.com/what/broken-object-level-authorization)
 {% endhint %}
 
-
-
