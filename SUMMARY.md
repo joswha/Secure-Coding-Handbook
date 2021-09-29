@@ -25,6 +25,7 @@
 ## API
 
 * [Broken Object Level Authorization](api/broken-object-level-authorization.md)
+* [Mass Assignment](api/mass-assignment.md)
 
 ## Auxiliary
 
