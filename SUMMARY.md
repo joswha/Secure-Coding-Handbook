@@ -25,6 +25,7 @@
 ## API
 
 * [Broken Object Level Authorization](api/broken-object-level-authorization.md)
+* [Excessive Data Exposure](api/excessive-data-exposure.md)
 * [Mass Assignment](api/mass-assignment.md)
 
 ## Auxiliary
