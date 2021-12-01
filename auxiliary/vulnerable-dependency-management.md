@@ -17,20 +17,20 @@ Being mindful when using dependencies on your projects and software in general i
   * [`npm audit`](https://docs.npmjs.com/auditing-package-dependencies-for-security-vulnerabilities) and [`retire.js`](https://retirejs.github.io/retire.js/) for Node.
   * [`bundler audit`](https://github.com/rubysec/bundler-audit) for Ruby.
 * **Keep on top of security bulletins.** Make sure your team is on the lookout for security announcements for the software you use. This can mean signing up for mailing lists, joining forums, or following library developers on social media. The development community is often the first become aware of security issues.
-* **Make penetration testing and code reviews part of your development lifecycle.** Penetration testing tools will attempt to take advantage of known exploits, checking whether your technology stack contains vulnerable components. Code reviews, on the other hand, allow for a constant reminder of what the specific code is supposed to to and how it does that\(eg. what dependencies it uses and so on\).
+* **Make penetration testing and code reviews part of your development lifecycle.** Penetration testing tools will attempt to take advantage of known exploits, checking whether your technology stack contains vulnerable components. Code reviews, on the other hand, allow for a constant reminder of what the specific code is supposed to to and how it does that(eg. what dependencies it uses and so on).
 * **Using dependency management tools.** Since they simplify a lot of the developer's job, you should consider using one of them. Most dominant programming languages have their own dependency management tools, such as:
-  * [Bundler](http://bundler.io/) for Ruby Gems.
+  * [Bundler](http://bundler.io) for Ruby Gems.
   * [Pip](https://packaging.python.org/installing/#use-pip-for-installing) for Python Packages.
-  * [NPM](https://docs.npmjs.com/) for Node Modules.
-  * [Maven](https://maven.apache.org/what-is-maven.html) and [Gradle](https://docs.gradle.org/current/userguide/tutorial_java_projects.html) for Java jars.
-  * [NuGet](https://www.nuget.org/) for .NET.
-  * [Composer](https://getcomposer.org/) for PHP.
+  * [NPM](https://docs.npmjs.com) for Node Modules.
+  * [Maven](https://maven.apache.org/what-is-maven.html) and [Gradle](https://docs.gradle.org/current/userguide/tutorial\_java\_projects.html) for Java jars.
+  * [NuGet](https://www.nuget.org) for .NET.
+  * [Composer](https://getcomposer.org) for PHP.
 
 ## 3. Takeaways:
 
 To sum up, **component-based vulnerabilities** occur when a web application component is unsupported, out of date, or vulnerable to a known exploit.
 
-To effectively mitigate against ﻿**component-based vulnerabilities**, developers must regularly audit software components and their dependencies, making sure the third-party libraries and software dependencies are always up-to-date.
+To effectively mitigate against **component-based vulnerabilities**, developers must regularly audit software components and their dependencies, making sure the third-party libraries and software dependencies are always up-to-date.
 
 Product teams must further establish security policies governing the use of third-party libraries, such as passing security tests, and regular patching and updating of application dependencies.
 
@@ -38,8 +38,7 @@ Product teams must further establish security policies governing the use of thir
 You can find more details about this topic here:
 
 * [Components with known vulnerabilities.](https://application.security/free-application-security-training/owasp-top-10-components-with-known-vulnerabilities)
-* [Vulnerable Dependency Management Cheat](https://cheatsheetseries.owasp.org/cheatsheets/Vulnerable_Dependency_Management_Cheat_Sheet.html).
+* [Vulnerable Dependency Management Cheat](https://cheatsheetseries.owasp.org/cheatsheets/Vulnerable\_Dependency\_Management\_Cheat\_Sheet.html).
 * [Securing Your Dependencies.](https://www.hacksplaining.com/prevention/toxic-dependencies)
 * [Dependency Confusion.](https://medium.com/@alex.birsan/dependency-confusion-4a5d60fec610)
 {% endhint %}
-

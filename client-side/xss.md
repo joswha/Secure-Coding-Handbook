@@ -1,10 +1,10 @@
-# Cross-Site Scripting \[XSS\]
+# Cross-Site Scripting \[XSS]
 
 ## 1. Introduction:
 
 This page highlights the basic principles of defending against XSS, regardless of the attack vector. We will, however, not dig into the negative repercussions that XSS attacks could cause; for more information regarding further exploitations of this attack, [please take your time reading this](https://owasp.org/www-community/attacks/xss/).
 
-Even if your server is secure, any hacker's best target is the web browser. Quite frankly, the browsers execute any JavaScript code that appears on any web page. Since the cross-site scripting attack is a really common one, we can divide it into three types: 
+Even if your server is secure, any hacker's best target is the web browser. Quite frankly, the browsers execute any JavaScript code that appears on any web page. Since the cross-site scripting attack is a really common one, we can divide it into three types:&#x20;
 
 * **Stored XSS.**
 * **Reflected XSS.**
@@ -19,11 +19,11 @@ Even if your server is secure, any hacker's best target is the web browser. Quit
 The first step towards preventing **stored cross-site scripting** ideally means escaping all dynamic content coming from a database, such that the browser interprets **the content** of HTML tags, instead of interpreting the entire content as raw HTML.
 
 | **Character** | **Entity encoding** |
-| :--- | :--- |
-| & | **&amp;** |
-| **'** | **&apos;** |
-| **&lt;** | **&lt;** |
-| **&gt;** | **&gt;** |
+| ------------- | ------------------- |
+| &             | **\&amp;**          |
+| **'**         | **\&apos;**         |
+| **<**         | **\&lt;**           |
+| **>**         | **\&gt;**           |
 
 As so, an example of how escaping and displaying the retrieved information from the database could look like:
 
@@ -35,7 +35,7 @@ As so, an example of how escaping and displaying the retrieved information from 
 </div>
 ```
 
-This conversion of escaped characters happens, of course, **after** the browser has constructed the DOM for the page, such that it will **not** execute the `<script>` tag. Since cross-site scripting is such a **common** **vulnerability**, modern **front-end frameworks** more likely than not **already escape dynamic content** by default. Usually, **string** variables in views are escaped automatically. 
+This conversion of escaped characters happens, of course, **after** the browser has constructed the DOM for the page, such that it will **not** execute the `<script>` tag. Since cross-site scripting is such a **common** **vulnerability**, modern **front-end frameworks** more likely than not **already escape dynamic content** by default. Usually, **string** variables in views are escaped automatically.&#x20;
 
 Here is an example of how **ReactJS** deals with escaping the response:
 
@@ -57,13 +57,13 @@ class UserProfilePage extends React.Component {
 Although **front-end frameworks tend to already escape dynamic content,** this is only limited to actually **displaying it**. If there is a case of using that content within `<a href={...} />, <img src={...} />` the developer should **take other defensive measures** of making sure that the retrieved data is properly escaped.
 {% endhint %}
 
-### 2.1.2. Implementing a Content Security Policy \[CSP\]:
+### 2.1.2. Implementing a Content Security Policy \[CSP]:
 
 We will dedicate an entire page for everything related to CSP,  however, it is worth mentioning some general aspects of how CSPs protect against cross-site scripting.
 
-Modern browsers allow websites to set a content security policy, which you can use to **lock down JavaScript execution** on your site. 
+Modern browsers allow websites to set a content security policy, which you can use to **lock down JavaScript execution** on your site.&#x20;
 
-A very basic policy that limits the imported scripts of a page to the **same domain**\(`self`\), and tells the browser **that inline JavaScript** should **NOT** be executed.
+A very basic policy that limits the imported scripts of a page to the **same domain**(`self`), and tells the browser **that inline JavaScript** should **NOT** be executed.
 
 ```markup
 Content-Security-Policy: script-src 'self' https://scripts.github.com
@@ -73,26 +73,26 @@ You can also set your site’s content security policy in a `<head>` tag in the 
 
 ## 2.2. Reflected Cross-Site Scripting:
 
-**Reflected attacks** are those where the injected script is reflected off the web server, such as in an error message, search results, or any other response that includes some or all of the user input part of the request. 
+**Reflected attacks** are those where the injected script is reflected off the web server, such as in an error message, search results, or any other response that includes some or all of the user input part of the request.&#x20;
 
 When a victim is tricked into **clicking on a malicious link**, submitting a specially crafted form, or even just browsing a malicious site, the injected code "travels" to the vulnerable website, which **reflects** the attack back to the user’s browser. The browser then executes the code because it came from a “trusted” server. **Reflected XSS** is also sometimes referred to as **Non-Persistent** or **Type-II XSS**.
 
 ### 2.2.1. Escapic Dynamic Content from the HTTP Requests:
 
-This mitigation closely follows the one discussed at **2.1.1.** Whether the dynamic content comes from the backend/ database or the HTTP request itself, it is **escaped in the same way**. Now luckily, modern front-end templates escape all variables, regarding where they came from\(HTTP request or backend\). 
+This mitigation closely follows the one discussed at **2.1.1.** Whether the dynamic content comes from the backend/ database or the HTTP request itself, it is **escaped in the same way**. Now luckily, modern front-end templates escape all variables, regarding where they came from(HTTP request or backend).&#x20;
 
 {% hint style="warning" %}
 Common target areas for reflected XSS are search pages and error pages since they display parts of the **query string back to the user.**
 {% endhint %}
 
-## 2.3. Document Object Model \[DOM\]-Based Cross-Site Scripting:
+## 2.3. Document Object Model \[DOM]-Based Cross-Site Scripting:
 
- **DOM-based XSS vulnerabilities** usually arise when **JavaScript** takes data from an attacker-controllable source, such as the URL, and passes it to a sink that supports dynamic code execution, such as `eval()` or `innerHTML`. This enables attackers to execute malicious JavaScript, which typically allows them to hijack other users' accounts.
+&#x20;**DOM-based XSS vulnerabilities** usually arise when **JavaScript** takes data from an attacker-controllable source, such as the URL, and passes it to a sink that supports dynamic code execution, such as `eval()` or `innerHTML`. This enables attackers to execute malicious JavaScript, which typically allows them to hijack other users' accounts.
 
-**Reflected** and **Stored** **XSS** are _server-side_ injection issues while **DOM-based XSS** is a _client \(browser\) side_ injection issue. With **Reflected/Stored** the attack is injected into the application during **server-side** processing of requests where untrusted input is **dynamically** added to HTML. For **DOM XSS**, the attack is injected into the application during runtime in the **client** directly.
+**Reflected** and **Stored** **XSS** are _server-side_ injection issues while **DOM-based XSS** is a _client (browser) side_ injection issue. With **Reflected/Stored** the attack is injected into the application during **server-side** processing of requests where untrusted input is **dynamically** added to HTML. For **DOM XSS**, the attack is injected into the application during runtime in the **client** directly.
 
 {% hint style="info" %}
-Take a look at [**this awesome resource on DOM XSS**](https://domgo.at/cxss/intro)\( analyzing the source code and finding the vulnerabilities\)
+Take a look at [**this awesome resource on DOM XSS**](https://domgo.at/cxss/intro)( analyzing the source code and finding the vulnerabilities)
 {% endhint %}
 
 ### 2.3.1. Vulnerable code example:
@@ -191,7 +191,7 @@ All in all, by ensuring that:
 
 1. **Dynamic content is always escaped**, regardless of its origin.
 2. **JavaScript** execution is **locked down,** with the use of CSP.
-3. Both **1.** and **2.** are followed simultaneously :\)
+3. Both **1.** and **2.** are followed simultaneously :)
 
 A developer will leave **little to no room** to XSS attacks in their application.
 
@@ -201,8 +201,7 @@ You can find more details about this topic here:
 * [Stored XSS Example](https://application.security/free-application-security-training/owasp-top-10-stored-cross-site-scripting)
 * [Reflected XSS Example](https://application.security/free-application-security-training/owasp-top-10-reflected-cross-site-scripting)
 * [DOM XSS Example](https://application.security/free-application-security-training/owasp-top-10-dom-cross-site-scripting)
-* [XSS Prevention Cheatsheet\[OWASP\]](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html)
-* [DOM XSS Prevention Cheatsheet\[OWASP\]](https://cheatsheetseries.owasp.org/cheatsheets/DOM_based_XSS_Prevention_Cheat_Sheet.html)
+* [XSS Prevention Cheatsheet\[OWASP\]](https://cheatsheetseries.owasp.org/cheatsheets/Cross\_Site\_Scripting\_Prevention\_Cheat\_Sheet.html)
+* [DOM XSS Prevention Cheatsheet\[OWASP\]](https://cheatsheetseries.owasp.org/cheatsheets/DOM\_based\_XSS\_Prevention\_Cheat\_Sheet.html)
 * [What is DOM-based XSS?](https://portswigger.net/web-security/cross-site-scripting/dom-based)
 {% endhint %}
-
