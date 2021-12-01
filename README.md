@@ -24,6 +24,10 @@ Welcome to the **Secure Coding Handbook!** Here, you will find everything that I
 [Broken link](broken-reference)
 {% endcontent-ref %}
 
+{% content-ref url="broken-reference" %}
+[Broken link](broken-reference)
+{% endcontent-ref %}
+
 #### Spotted a bug?
 
 Making mistakes is human nature, fortunately. Please note that I am by no means an expert and should you find something that is totally erroneous or deviated from the subject, please [create an issue here](https://github.com/joswha/Secure-Coding-Handbook/issues).&#x20;

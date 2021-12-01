@@ -34,3 +34,6 @@
 * [Deserialization](auxiliary/deserialization.md)
 * [Logging](auxiliary/logging.md)
 
+## Solidity
+
+* [Re-Entrancy](solidity/re-entrancy.md)

@@ -14,6 +14,7 @@ description: Current known list of resources
 * [https://portswigger.net/web-security](https://portswigger.net/web-security)
 * [https://www.shiftleft.io/learn/](https://www.shiftleft.io/learn/)
 * [https://www.hacksplaining.com/exercises/](https://www.hacksplaining.com/exercises/toxic-dependencies)
+* [https://ethernaut.openzeppelin.com/](https://ethernaut.openzeppelin.com)
 
 ## 2. Documentation:
 
