@@ -15,6 +15,7 @@ description: Current known list of resources
 * [https://www.shiftleft.io/learn/](https://www.shiftleft.io/learn/)
 * [https://www.hacksplaining.com/exercises/](https://www.hacksplaining.com/exercises/toxic-dependencies)
 * [https://ethernaut.openzeppelin.com/](https://ethernaut.openzeppelin.com)
+* [https://secdim.com](https://secdim.com)
 
 ## 2. Documentation:
 
@@ -34,6 +35,7 @@ description: Current known list of resources
 * ****[https://seclab.stanford.edu/websec/](https://seclab.stanford.edu/websec/)
 * [https://www.offensive-security.com/offsec/white-box-web-application-pentesting/](https://www.offensive-security.com/offsec/white-box-web-application-pentesting/)
 * [https://github.com/paragonie/awesome-appsec](https://github.com/paragonie/awesome-appsec)
+* [https://learn.secdim.com](https://learn.secdim.com)
 
 ## 3. Tools and miscellaneous:
 
@@ -42,4 +44,5 @@ description: Current known list of resources
 * [https://owasp.org/www-community/Source\_Code\_Analysis\_Tools](https://owasp.org/www-community/Source\_Code\_Analysis\_Tools)
 * [https://www.nist.gov/itl/ssd/software-quality-group/source-code-security-analyzers](https://www.nist.gov/itl/ssd/software-quality-group/source-code-security-analyzers)
 * [https://en.wikipedia.org/wiki/List\_of\_tools\_for\_static\_code\_analysis](https://en.wikipedia.org/wiki/List\_of\_tools\_for\_static\_code\_analysis)
+* [https://play.secdim.com](https://play.secdim.com)
 
